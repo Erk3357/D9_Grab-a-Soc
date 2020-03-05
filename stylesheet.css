@@ -1,0 +1,66 @@
+*{
+    margin: 0px;
+    padding: 0px; 
+    font-family: sans-serif;
+}
+
+
+
+.sidenav{
+    width: 200px;
+    height: 100%;
+    background-color: aquamarine;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+}
+
+.main{
+    position: absolute;
+    left: 250px;
+    margin-right: 50px;;
+    background-color: blueviolet;
+}
+
+.searchbtn{
+    background-color: forestgreen;    
+        padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+
+.interest{
+    padding: 30px;
+    margin: 20px;
+        background-color: aqua;
+    border-radius: 10px;
+}
+
+.active{
+    background-color: blue;
+    font-weight: bold;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: aquamarine;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+    border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
