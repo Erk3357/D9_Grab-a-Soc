@@ -9,65 +9,347 @@
     </head>
     <body>
 
-        <div class="sidenav">
-            <div class="searchbtn" onclick="search()">Search</div>
+        <div class="sidenav" onmouseenter="overlayOn()" onmouseleave="overlayOff()">
+            <div class="navinfo"><p>Simply highlight your interests from the menu below:</p></div>
+            <div class="interest-list">
+                <div class="interest" id="tab1" onclick="interestToggle('1')">Soccer</div>
+                <div class="interest" id="tab2" onclick="interestToggle('2')">GAA</div>
+                <div class="interest" id="tab3" onclick="interestToggle('3')">Watersport</div>
+                <div class="interest" id="tab4" onclick="interestToggle('4')">Fitness</div>
+                <div class="interest" id="tab5" onclick="interestToggle('5')">Dancing</div> 
+                <div class="interest" id="tab6" onclick="interestToggle('6')">Soccer</div>
+                <div class="interest" id="tab7" onclick="interestToggle('7')">Team-Sports</div>
+                <div class="interest" id="tab8" onclick="interestToggle('8')">Individual-Sports</div>
+                <div class="interest" id="tab9" onclick="interestToggle('9')">Net-Games</div>
+                <div class="interest" id="tab10" onclick="interestToggle('10')">Tennis</div>
+                <div class="interest" id="tab11" onclick="interestToggle('11')">Rugby</div>
+                <div class="interest" id="tab12" onclick="interestToggle('12')">Outdoors</div>
+                <div class="interest" id="tab13" onclick="interestToggle('13')">Animals </div>
+                <div class="interest" id="tab14" onclick="interestToggle('14')">Self-Defence</div>
+                <div class="interest" id="tab15" onclick="interestToggle('15')">Combat-Sport</div>
 
-            <div class="interest" id="tab1" onclick="interestToggle('1')">Running</div>
-            <div class="interest" id="tab2" onclick="interestToggle('2')">Swimming</div>
-            <div class="interest" id="tab3" onclick="interestToggle('3')">Hockey</div>
-            <div class="interest" id="tab4" onclick="interestToggle('4')">Technology</div>
-            <div class="interest" id="tab5" onclick="interestToggle('5')">Football</div> 
-            <div class="interest" id="tab6" onclick="interestToggle('6')">Football</div>
-            <div class="interest" id="tab7" onclick="interestToggle('7')">Football</div>
-            <div class="interest" id="tab8" onclick="interestToggle('8')">Football</div>
-
+            </div>    
         </div>
 
-        
+  
         <div id="main" class="main">
-            
-           <div class="soc-container Running">
+            <div id="overlay"></div>
+            <div id="title">
+                <h2 class="title-subheader">Welcome to </h2>
+                <h1 class="title-header">Grab-A-Soc!</h1>
+                <h2 class="title-subheader">Select your interests from the Interest panel.</h2>
+                <div class="socmed-container">
+                    <img src="images/SocialMedia/f_logo_RGB-Blue_100.png">
+                    <div class="socmed-text" style="color: dodgerblue;">Check us out on Facebook!</div>
+                </div>
+
+                <div class="socmed-container">
+                    <img src="images/SocialMedia/Twitter_Logo_Blue.png">
+                    <div class="socmed-text" style="color: cyan;">Check us out on Twitter!</div>
+                </div>
+
+                <div class="socmed-container">
+                    <img src="images/SocialMedia/1200px-Instagram_logo_2016.svg.png">
+                    <div class="socmed-text" style="color: purple;">Check us out on Instagram!</div>
+                </div>
+
+
+            </div>    
+            <div class="soc-content">
+            <div class="soc-container Outdoors">
                 <div class="socimg-container">
-                    <img src="https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Running/Articles/The+Top+5+Tips/runners-carousel.jpg">
+                    <img src="images/airsoft.jpg">
                 </div>
                 <div class="soctext-container">
-                    <h1 class="socheader">Running Club</h1>
-                    <p class="socpara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id metus in nisi convallis convallis. Donec lorem lectus, condimentum feugiat nisl sed, eleifend posuere eros. Mauris volutpat pretium nunc id laoreet. Sed tempor elementum ipsum sed dictum. Quisque rhoncus facilisis sem, at aliquam felis pulvinar vitae. Aliquam sit amet ante at felis vestibulum mollis et et ligula. Nam ullamcorper ligula ac nibh tincidunt scelerisque. Nulla sagittis sem vel turpis sagittis commodo. Quisque convallis commodo ligula eu maximus. Donec auctor sapien nec eros iaculis, ut viverra orci tempus. Donec vel erat ac tellus gravida posuere nec eu dui. Nunc et tristique nisl, non mattis velit. Vivamus mattis, mauris rhoncus aliquet gravida, erat nunc pellentesque neque, quis sagittis nunc turpis non leo.</p>
-                </div>
-            </div>
-            
-            <div class="soc-container Technology">
-                <div class="socimg-container">
-                    <img src="https://d3nfwcxd527z59.cloudfront.net/content/uploads/2019/10/03103831/Lionel-Messi-dribble-Barcelona-Real-Madrid.jpg">
-                </div>
-                <div class="soctext-container">
-                    <h1 class="socheader">Technology Society</h1>
-                    <p class="socpara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id metus in nisi convallis convallis. Donec lorem lectus, condimentum feugiat nisl sed, eleifend posuere eros. Mauris volutpat pretium nunc id laoreet. Sed tempor elementum ipsum sed dictum. Quisque rhoncus facilisis sem, at aliquam felis pulvinar vitae. Aliquam sit amet ante at felis vestibulum mollis et et ligula. Nam ullamcorper ligula ac nibh tincidunt scelerisque. Nulla sagittis sem vel turpis sagittis commodo. Quisque convallis commodo ligula eu maximus. Donec auctor sapien nec eros iaculis, ut viverra orci tempus. Donec vel erat ac tellus gravida posuere nec eu dui. Nunc et tristique nisl, non mattis velit. Vivamus mattis, mauris rhoncus aliquet gravida, erat nunc pellentesque neque, quis sagittis nunc turpis non leo.</p>
-                </div>
-            </div>
-            
-            
-            <div class="soc-container Swimming">
-                <div class="socimg-container">
-                    <img src="https://d1s9j44aio5gjs.cloudfront.net/2016/07/The_Benefits_of_Swimming.jpg">
-                </div>
-                <div class="soctext-container">
-                    <h1 class="socheader">Swimming Club</h1>
-                    <p class="socpara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id metus in nisi convallis convallis. Donec lorem lectus, condimentum feugiat nisl sed, eleifend posuere eros. Mauris volutpat pretium nunc id laoreet. Sed tempor elementum ipsum sed dictum. Quisque rhoncus facilisis sem, at aliquam felis pulvinar vitae. Aliquam sit amet ante at felis vestibulum mollis et et ligula. Nam ullamcorper ligula ac nibh tincidunt scelerisque. Nulla sagittis sem vel turpis sagittis commodo. Quisque convallis commodo ligula eu maximus. Donec auctor sapien nec eros iaculis, ut viverra orci tempus. Donec vel erat ac tellus gravida posuere nec eu dui. Nunc et tristique nisl, non mattis velit. Vivamus mattis, mauris rhoncus aliquet gravida, erat nunc pellentesque neque, quis sagittis nunc turpis non leo.</p>
-                </div>
-            </div>
-            
-                        <div class="soc-container Swimming Technology">
-                <div class="socimg-container">
-                    <img src="https://d1s9j44aio5gjs.cloudfront.net/2016/07/The_Benefits_of_Swimming.jpg">
-                </div>
-                <div class="soctext-container">
-                    <h1 class="socheader">Swimming Club</h1>
-                    <p class="socpara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id metus in nisi convallis convallis. Donec lorem lectus, condimentum feugiat nisl sed, eleifend posuere eros. Mauris volutpat pretium nunc id laoreet. Sed tempor elementum ipsum sed dictum. Quisque rhoncus facilisis sem, at aliquam felis pulvinar vitae. Aliquam sit amet ante at felis vestibulum mollis et et ligula. Nam ullamcorper ligula ac nibh tincidunt scelerisque. Nulla sagittis sem vel turpis sagittis commodo. Quisque convallis commodo ligula eu maximus. Donec auctor sapien nec eros iaculis, ut viverra orci tempus. Donec vel erat ac tellus gravida posuere nec eu dui. Nunc et tristique nisl, non mattis velit. Vivamus mattis, mauris rhoncus aliquet gravida, erat nunc pellentesque neque, quis sagittis nunc turpis non leo.</p>
+                    <h1 class="socheader">Airsoft Club</h1>
+                    <p class="socpara">The GMIT Airsoft Club is for the adrenaline chasing student, with a strategic mind set students gather every second weekend for a action packed airsoft gun battle, if you seek action, and are enthusiastic about airsoft weapons this is the club for you!</p>
+                    <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
                 </div>
             </div>
 
+<div class="soc-container Fitness Dancing">
+                <div class="socimg-container">
+                    <img src="images/athletics.jpg">
+                </div>
+                <div class="soctext-container">
+                    <h1 class="socheader">Athletics</h1>
+                    <p class="socpara">Athletics Club is perfect for the athletes or people who are interested in being fit in general, an overall idea of staying fit is important, and this club is perfect to help you. </p>
+                    <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                </div>
+            </div>
+
+<div class="soc-container Individual-Sports  Net-Games Tennis">
+                <div class="socimg-container">
+                    <img src="images/badminton.jpg">
+                </div>
+                <div class="soctext-container">
+                    <h1 class="socheader">Badminton</h1>
+                    <p class="socpara">Badminton Club holds helpful badminton matches to help you improve at badminton and to gain experience in a social environment with badminton.  </p>
+                    <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                </div>
+            </div>
+
+
+<div class="soc-container Team-Sports">
+                <div class="socimg-container">
+                    <img src="images/basketball.jpg">
+                </div>
+                <div class="soctext-container">
+                    <h1 class="socheader">Basketball</h1>
+                    <p class="socpara">Basketball is perfect for anyone interested in basketball in the past or interested in starting a new hobby, it is great cardio and great fun, if you want a chance of competing this could be your sport.  </p>
+                    <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                </div>
+            </div>
+		
+
+<div class="soc-container Combat-Sport Individual-Sports">
+                <div class="socimg-container">
+                    <img src="images/boxing.jpg">
+                </div>
+                <div class="soctext-container">
+                    <h1 class="socheader">Boxing</h1>
+                    <p class="socpara">If theres ever a combat sport to partake in casually or professionally boxing is the one, testing you to your limits and having fun whilst doing it. </p>
+                    <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>                
+                </div>
+            </div>
+
+
+<div class="soc-container GAA">
+                <div class="socimg-container">
+                    <img src="images/camogie.jpg">
+                </div>
+                <div class="soctext-container">
+                    <h1 class="socheader">Camogie</h1>
+                    <p class="socpara">The girl hurling</p>
+                    <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                </div>
+            </div>
+
+
+
+<div class="soc-container Fitness Dancing">
+                <div class="socimg-container">
+                    <img src="images/cheerleading.jpg">
+                </div>
+                <div class="soctext-container">
+                    <h1 class="socheader">Cheerleading</h1>
+                    <p class="socpara">Find teamwork and new friends in the cheerleading clubs, making up your own routines and learning professional based workout training</p>
+                    <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                </div>
+            </div>
+
+<div class="soc-container Team-Sports">
+                <div class="socimg-container">
+                    <img src="images/cricket.jpg">
+                </div>
+                <div class="soctext-container">
+                    <h1 class="socheader">Cricket</h1>
+                    <p class="socpara"> An exciting extreme sport, or a great new hobbie to start with you and your friends/</p>
+                    <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                </div>
+            </div>
+
+
+<div class="soc-container Outdoors">
+                <div class="socimg-container">
+                    <img src="images/cycling.jpg">
+                </div>
+                <div class="soctext-container">
+                    <h1 class="socheader">Cycling</h1>
+                    <p class="socpara"> Cycle with your friends for fun , or practice to compete in races, Cycling club is really for the avid cyclist. </p>
+                    <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                </div>
+            </div>
+
+<div class="soc-container Dancing Fitness">
+                <div class="socimg-container">
+                    <img src="images/dance.jpg">
+                </div>
+                <div class="soctext-container">
+                    <h1 class="socheader">Dance</h1>
+                    <p class="socpara"> Move to the music, this club is perfect for using your movement to express your emotions and your vibe.  </p>
+                    <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                </div>
+            </div>
+
+<div class="soc-container Animals">
+                <div class="socimg-container">
+                    <img src="images/equestrian.jpg">
+                </div>
+                <div class="soctext-container">
+                    <h1 class="socheader">Equastrian</h1>
+                    <p class="socpara"> Many different horses for many different types of activities, if you are interested in horse related activities this club is for you.,   </p>
+                    <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                </div>
+            </div>
+
+<div class="soc-container Fitness">
+                <div class="socimg-container">
+                    <img src="images/fitness.jpg">
+                </div>
+                <div class="soctext-container">
+                    <h1 class="socheader">Fitness Classes</h1>
+                    <p class="socpara"> Various amount of classes to stay fit varying from , spinning classes, circuit classes, boxing classes and other various cardio based classes.   </p>
+                    <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                </div>
+            </div>
+
+<div class="soc-container Team-Sports">
+
+                <div class="socimg-container">
+                    <img src="images/frisbee.jpg">
+                </div>
+                <div class="soctext-container">
+                     <h1 class="socheader">Frisbee</h1>
+                     <p class="socpara">Have you ever thought that frisbee can be competetive sport? It can and its more fun than you can imagine. try it yourself!</p>
+                     <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                    </div>
+            </div>
             
+<div class="soc-container Individual-Sports">
+                <div class="socimg-container">
+                    <img src="images/golf.jpg">
+                </div>
+                <div class="soctext-container">
+                     <h1 class="socheader">Golf</h1>
+                     <p class="socpara">A slow paced sport, but not lacking in excitement! Join the golf club today!</p>
+                     <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                    </div>
+            </div>
+            
+<div class="soc-container Tennis Individual-Sports">
+                <div class="socimg-container">
+                    <img src="images/handball.jpg">
+                </div>
+                <div class="soctext-container">
+                     <h1 class="socheader">Handball</h1>
+                     <p class="socpara">If standard football games bore you, try out some variety with us!</p>
+                     <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                    </div>
+            </div>
+            
+<div class="soc-container Team-Sports">
+                <div class="socimg-container">
+                    <img src="images/hockey.jpg">
+                </div>
+                <div class="soctext-container">
+                     <h1 class="socheader">Hockey Team</h1>
+                     <p class="socpara">Contact sport doesn't shy you away? This club could be for you.</p>
+                     <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                    </div>
+            </div>
+            
+<div class="soc-container Soccer Team-Sports">
+                 <div class="socimg-container">
+                    <img src="images/indoorsoccer.jpg">
+                </div>
+                <div class="soctext-container">
+                     <h1 class="socheader">Indoor soccer Team</h1>
+                     <p class="socpara">For those of you who prefer not getting your nose cold, this is the sport for you.</p>
+                     <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                    </div>
+            </div>
+            
+<div class="soc-container Combat-Sport Self-Defence">
+             <div class="socimg-container Combat-Sport Self-Defence">
+                    <img src="images/judo.jpg">
+                </div>
+                <div class="soctext-container">
+                     <h1 class="socheader">Judo Club</h1>
+                     <p class="socpara">Find the perfect balance of a stress outlet and developing physical form with the Judo club.</p>
+                     <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                    </div>
+            </div>
+            
+<div class="soc-container Combat-Sport Self-Defence">
+                <div class="socimg-container">
+                    <img src="images/karate.jpg">
+                </div>
+                <div class="soctext-container">
+                     <h1 class="socheader">Karate Club</h1>
+                     <p class="socpara">Ever want to learn self defense, or just gain some mindfulness? Give the Karate club a try.</p>
+                     <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                    </div>
+            </div>
+            
+<div class="soc-container Watersport Outdoors">
+                 <div class="socimg-container">
+                    <img src="images/kayak.jpg">
+                </div>
+                <div class="soctext-container">
+                     <h1 class="socheader">Kayak Club</h1>
+                     <p class="socpara">Enjoy the thrill of whitewater rapids and water sports with us.</p>
+                     <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                    </div>
+            </div>
+            
+<div class="soc-container Combat-Sport">
+                <div class="socimg-container">
+                    <img src="images/kickboxing.jpg">
+                </div>
+                <div class="soctext-container">
+                     <h1 class="socheader">Kickboxing</h1>
+                     <p class="socpara">Tone your athletic form and meet some new people, all while quenching your thirst for adrenaline.</p>
+                     <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                    </div>
+            </div>
+            
+<div class="soc-container Team-Sports GAA">
+                 <div class="socimg-container">
+                    <img src="images/ladiesfootball.jpg">
+                </div>
+                <div class="soctext-container">
+                     <h1 class="socheader">Ladies Football</h1>
+                     <p class="socpara">One of only two women-only sports on campus, be sure to give our vibrant club a go.</p>
+                     <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                    </div>
+            </div>
+            
+<div class="soc-container Team-Sports GAA">
+                 <div class="socimg-container">
+                    <img src="images/mensfootball.jpg">
+                </div>
+                <div class="soctext-container">
+                     <h1 class="socheader">Men's Football</h1>
+                     <p class="socpara">For all of you looking for some competition and adrenaline, this club may be for you.</p>
+                     <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                    </div>
+            </div>
+            
+<div class="soc-container Rugby Team-Sports">
+                <div class="socimg-container">
+                    <img src="images/mensrugby.jpg">
+                </div>
+                <div class="soctext-container">
+                     <h1 class="socheader">Men's Rugby</h1>
+                     <p class="socpara">Learn to play this exciting sport in Ireland's rugby capital.</p>
+                     <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                    </div>
+            </div>
+            
+<div class="soc-container Team-Sports Soccer">
+                <div class="socimg-container">
+                    <img src="images/mensoccer.jpg">
+                </div>
+                <div class="soctext-container">
+                     <h1 class="socheader">Men's Soccer</h1>
+                     <p class="socpara">Hit the field and gain teamwork skills with the soccer club.</p>
+                     <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                    </div>
+            </div>
+            
+<div class="soc-container Combat-Sport">
+                <div class="socimg-container">
+                    <img src="images/mma.jpg">
+                </div>
+                <div class="soctext-container">
+                     <h1 class="socheader">MMA</h1>
+                     <p class="socpara">For all students seeking an adrenaline- fueled, cage fighting training experience! Make McGreggor proud.</p>
+                     <div class="socbtn" onclick="sendMail()">+ Request to join this Club</div>
+                    </div>
+            </div>
+
+            </div>
         </div>
 
         <script src="script.js"></script>
